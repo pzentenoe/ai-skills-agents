@@ -170,28 +170,66 @@ Copiar los directorios de skills en tu directorio de skills de Claude Code:
 cp -r SKILLS/* ~/.claude/skills/
 ```
 
-### Ejemplos
+### Ejemplos de uso (una vez instalados)
 
-**Invocar un skill directamente:**
-
-```
-> /brainstorming
-> /playwright
-> /github-pr
-> /writing-plans
-```
-
-**Los agentes se invocan automaticamente.** Claude Code detecta la tarea y despacha al agente adecuado:
+Dentro de Claude Code, usa `/skill-name` seguido de tu instruccion:
 
 ```
-> "Agrega un endpoint GET /users/:id al proyecto Go"
-  → Claude Code invoca automaticamente el agente golang-pro
+> /brainstorming Quiero hacer un dashboard de metricas para el equipo de ventas
 
-> "Crea tests para el UserRepository"
-  → Claude Code invoca automaticamente el agente golang-ginkgo-tester
+  Claude te hara preguntas para refinar la idea antes de escribir codigo:
+  - Que metricas necesitas? (revenue, conversiones, churn...)
+  - Que stack usas? (Next.js, Angular, etc.)
+  - Necesitas datos en tiempo real o reportes diarios?
+  Una vez alineado el diseño, recien ahi comienza la implementacion.
+```
 
-> "Construye un formulario de login con shadcn"
-  → Claude Code invoca automaticamente el agente shadcn-ui-expert
+```
+> /github-pr Crea un PR con los cambios de esta rama
+
+  Claude analiza los commits, genera titulo y descripcion, y crea el PR
+  con resumen, test plan y labels apropiados.
+```
+
+```
+> /writing-plans Necesito implementar autenticacion con JWT en el API de Go
+
+  Claude genera un plan paso a paso: archivos a crear/modificar,
+  dependencias necesarias, orden de implementacion y como testear cada parte.
+```
+
+```
+> /playwright Agrega tests E2E para el flujo de checkout
+
+  Claude crea los tests con Page Objects, selectores accesibles
+  y assertions siguiendo las mejores practicas de Playwright.
+```
+
+```
+> /systematic-debugging Los tests de integracion fallan intermitentemente
+
+  Claude investiga la causa raiz sistematicamente antes de proponer fixes:
+  reproduce el error, analiza logs, identifica race conditions o state leaks.
+```
+
+```
+> /golang-expert Refactoriza el servicio de notificaciones con Clean Architecture
+
+  Claude revisa el codigo actual, identifica violaciones de SOLID
+  y propone la nueva estructura antes de implementar.
+```
+
+**Los agentes se invocan automaticamente.** No necesitas usar `/`, Claude Code detecta la tarea y despacha al agente adecuado:
+
+```
+> Agrega un endpoint GET /users/:id al proyecto Go
+  → invoca automaticamente el agente golang-pro
+
+> Crea tests para el UserRepository
+  → invoca automaticamente el agente golang-ginkgo-tester
+
+> Construye un formulario de login con shadcn
+  → invoca automaticamente el agente shadcn-ui-expert
 ```
 
 **Los skills tambien pueden activarse por contexto.** Por ejemplo, al trabajar en un archivo `.tsx` con imports de Next.js, los skills `react-19`, `nextjs-15` o `vercel-react-best-practices` se aplican automaticamente.
