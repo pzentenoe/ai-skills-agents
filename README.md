@@ -16,7 +16,7 @@ Repositorio de agentes y skills personalizados para Claude Code. Proporciona cap
 
 ## Skills
 
-### Frontend
+### `frontend/` — Frontend & UI
 
 | Skill | Descripcion |
 |-------|-------------|
@@ -29,40 +29,35 @@ Repositorio de agentes y skills personalizados para Claude Code. Proporciona cap
 | **ai-sdk-5** | Patrones del Vercel AI SDK 5 y breaking changes desde v4. |
 | **typescript** | Patrones estrictos de TypeScript: tipos, interfaces y generics. |
 | **vercel-react-best-practices** | Guias de optimizacion de rendimiento para React y Next.js del equipo de ingenieria de Vercel. |
-
-### Angular
-
-| Skill | Descripcion |
-|-------|-------------|
 | **angular/core** | Patrones core de Angular: standalone components, signals, inject, control flow y zoneless. |
 | **angular/architecture** | Arquitectura Angular: scope rule, estructura de proyecto y convenciones de nombrado. |
 | **angular/forms** | Formularios en Angular: Signal Forms (experimental) y Reactive Forms. |
 | **angular/performance** | Optimizacion de rendimiento Angular: NgOptimizedImage, @defer, lazy loading y SSR. |
 
-### Backend
+### `backend/` — Backend
 
 | Skill | Descripcion |
 |-------|-------------|
 | **golang-expert** | Desarrollo backend en Go con Clean Architecture, principios SOLID y patrones idiomaticos. |
 | **django-drf** | Patrones de Django REST Framework: ViewSets, Serializers y Filters. |
 
-### Testing
+### `testing/` — Testing
 
 | Skill | Descripcion |
 |-------|-------------|
 | **playwright** | Testing E2E con Playwright: Page Objects, selectores y flujo MCP. |
 | **pytest** | Patrones de testing con Pytest para Python: fixtures, mocking y markers. |
 
-### Documentos
+### `documents/` — Documentos
 
 | Skill | Descripcion |
 |-------|-------------|
-| **document-skills/pdf** | Manipulacion de PDFs: extraccion de texto/tablas, creacion, merge/split y formularios. |
-| **document-skills/docx** | Creacion y edicion de documentos .docx con tracked changes y comentarios. |
-| **document-skills/pptx** | Creacion y edicion de presentaciones .pptx con layouts y speaker notes. |
-| **document-skills/xlsx** | Hojas de calculo: formulas, formato y visualizacion de datos. |
+| **docx** | Creacion y edicion de documentos .docx con tracked changes y comentarios. |
+| **pdf** | Manipulacion de PDFs: extraccion de texto/tablas, creacion, merge/split y formularios. |
+| **pptx** | Creacion y edicion de presentaciones .pptx con layouts y speaker notes. |
+| **xlsx** | Hojas de calculo: formulas, formato y visualizacion de datos. |
 
-### DevOps & Integraciones
+### `devops/` — DevOps & Integraciones
 
 | Skill | Descripcion |
 |-------|-------------|
@@ -71,24 +66,24 @@ Repositorio de agentes y skills personalizados para Claude Code. Proporciona cap
 | **jira-task** | Creacion de tareas en Jira siguiendo formato estandar. |
 | **mcp-builder** | Guia para crear servidores MCP de alta calidad para integrar servicios y APIs externas. |
 
-### Superpowers (Metodologias y Workflows)
+### `superpowers/` — Metodologias y Workflows
 
 | Skill | Descripcion |
 |-------|-------------|
-| **superpowers/brainstorming** | Dialogo colaborativo para explorar intencion, requisitos y diseño antes de implementar. |
-| **superpowers/writing-plans** | Creacion de planes de implementacion detallados a partir de specs o requisitos, antes de tocar codigo. |
-| **superpowers/executing-plans** | Ejecucion de planes de implementacion escritos con checkpoints de revision. |
-| **superpowers/subagent-driven-development** | Ejecucion de planes despachando un subagente por tarea con revision en dos etapas (spec + calidad). |
-| **superpowers/dispatching-parallel-agents** | Despacho de agentes paralelos para tareas independientes sin estado compartido. |
-| **superpowers/test-driven-development** | Flujo TDD: escribir test, verlo fallar, escribir codigo minimo para pasar. |
-| **superpowers/systematic-debugging** | Debugging sistematico: encontrar la causa raiz antes de intentar fixes. |
-| **superpowers/verification-before-completion** | Verificacion obligatoria con evidencia antes de declarar trabajo completado. |
-| **superpowers/finishing-a-development-branch** | Guia para completar trabajo en rama: merge, PR o cleanup. |
-| **superpowers/using-git-worktrees** | Creacion de worktrees Git aislados para trabajo en features sin afectar el workspace actual. |
-| **superpowers/writing-skills** | Creacion y edicion de skills con enfoque TDD aplicado a documentacion de procesos. |
-| **superpowers/using-superpowers** | Skill base que establece como encontrar y usar otros skills automaticamente. |
+| **brainstorming** | Dialogo colaborativo para explorar intencion, requisitos y diseño antes de implementar. |
+| **writing-plans** | Creacion de planes de implementacion detallados a partir de specs o requisitos, antes de tocar codigo. |
+| **executing-plans** | Ejecucion de planes de implementacion escritos con checkpoints de revision. |
+| **subagent-driven-development** | Ejecucion de planes despachando un subagente por tarea con revision en dos etapas (spec + calidad). |
+| **dispatching-parallel-agents** | Despacho de agentes paralelos para tareas independientes sin estado compartido. |
+| **test-driven-development** | Flujo TDD: escribir test, verlo fallar, escribir codigo minimo para pasar. |
+| **systematic-debugging** | Debugging sistematico: encontrar la causa raiz antes de intentar fixes. |
+| **verification-before-completion** | Verificacion obligatoria con evidencia antes de declarar trabajo completado. |
+| **finishing-a-development-branch** | Guia para completar trabajo en rama: merge, PR o cleanup. |
+| **using-git-worktrees** | Creacion de worktrees Git aislados para trabajo en features sin afectar el workspace actual. |
+| **writing-skills** | Creacion y edicion de skills con enfoque TDD aplicado a documentacion de procesos. |
+| **using-superpowers** | Skill base que establece como encontrar y usar otros skills automaticamente. |
 
-### Productividad & Meta
+### `meta/` — Productividad & Meta
 
 | Skill | Descripcion |
 |-------|-------------|
@@ -106,33 +101,39 @@ Repositorio de agentes y skills personalizados para Claude Code. Proporciona cap
 │   ├── golang-pro.md
 │   ├── golang-ginkgo-tester.md
 │   └── shadcn-ui-expert.md
-└── SKILLS/                  # Skills invocables
-    ├── ai-sdk-5/
-    ├── angular/
-    │   ├── architecture/
-    │   ├── core/
-    │   ├── forms/
-    │   └── performance/
-    ├── django-drf/
-    ├── document-skills/
+└── SKILLS/
+    ├── frontend/                # Frontend & UI
+    │   ├── angular/
+    │   │   ├── architecture/
+    │   │   ├── core/
+    │   │   ├── forms/
+    │   │   └── performance/
+    │   ├── ai-sdk-5/
+    │   ├── nextjs-15/
+    │   ├── nextjs-ui-builder/
+    │   ├── react-19/
+    │   ├── tailwind-4/
+    │   ├── typescript/
+    │   ├── vercel-react-best-practices/
+    │   ├── zod-4/
+    │   └── zustand-5/
+    ├── backend/                 # Backend
+    │   ├── golang-expert/
+    │   └── django-drf/
+    ├── testing/                 # Testing
+    │   ├── playwright/
+    │   └── pytest/
+    ├── documents/               # Documentos
     │   ├── docx/
     │   ├── pdf/
     │   ├── pptx/
     │   └── xlsx/
-    ├── find-skills/
-    ├── github-pr/
-    ├── golang-expert/
-    ├── jira-epic/
-    ├── jira-task/
-    ├── mcp-builder/
-    ├── nextjs-15/
-    ├── nextjs-ui-builder/
-    ├── playwright/
-    ├── prompt-engineering-patterns/
-    ├── pytest/
-    ├── react-19/
-    ├── skill-creator/
-    ├── superpowers/
+    ├── devops/                  # DevOps & Integraciones
+    │   ├── github-pr/
+    │   ├── jira-epic/
+    │   ├── jira-task/
+    │   └── mcp-builder/
+    ├── superpowers/             # Metodologias y Workflows
     │   ├── brainstorming/
     │   ├── dispatching-parallel-agents/
     │   ├── executing-plans/
@@ -145,11 +146,10 @@ Repositorio de agentes y skills personalizados para Claude Code. Proporciona cap
     │   ├── verification-before-completion/
     │   ├── writing-plans/
     │   └── writing-skills/
-    ├── tailwind-4/
-    ├── typescript/
-    ├── vercel-react-best-practices/
-    ├── zod-4/
-    └── zustand-5/
+    └── meta/                    # Productividad & Meta
+        ├── find-skills/
+        ├── prompt-engineering-patterns/
+        └── skill-creator/
 ```
 
 ## Uso
