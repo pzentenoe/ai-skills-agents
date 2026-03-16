@@ -33,6 +33,8 @@ Repositorio de agentes y skills personalizados para Claude Code. Proporciona cap
 | **angular/architecture** | Arquitectura Angular: scope rule, estructura de proyecto y convenciones de nombrado. |
 | **angular/forms** | Formularios en Angular: Signal Forms (experimental) y Reactive Forms. |
 | **angular/performance** | Optimizacion de rendimiento Angular: NgOptimizedImage, @defer, lazy loading y SSR. |
+| **electron** | Patrones de Electron para aplicaciones de escritorio multiplataforma: procesos main/renderer, IPC y integraciones nativas. |
+| **react-native** | Patrones de React Native para desarrollo mobile con Expo, React Navigation y NativeWind. |
 
 ### `backend/` — Backend
 
@@ -40,6 +42,9 @@ Repositorio de agentes y skills personalizados para Claude Code. Proporciona cap
 |-------|-------------|
 | **golang-expert** | Desarrollo backend en Go con Clean Architecture, principios SOLID y patrones idiomaticos. |
 | **django-drf** | Patrones de Django REST Framework: ViewSets, Serializers y Filters. |
+| **java-21** | Patrones de Java 21: records, sealed types, virtual threads y codigo moderno seguro. |
+| **spring-boot-3** | Patrones de Spring Boot 3: configuracion, inyeccion de dependencias y servicios web. |
+| **hexagonal-architecture-layers-java** | Arquitectura hexagonal para servicios Java con boundaries estrictos entre Domain/Application/Infrastructure. |
 
 ### `testing/` — Testing
 
@@ -109,17 +114,22 @@ Repositorio de agentes y skills personalizados para Claude Code. Proporciona cap
     │   │   ├── forms/
     │   │   └── performance/
     │   ├── ai-sdk-5/
+    │   ├── electron/
     │   ├── nextjs-15/
     │   ├── nextjs-ui-builder/
     │   ├── react-19/
+    │   ├── react-native/
     │   ├── tailwind-4/
     │   ├── typescript/
     │   ├── vercel-react-best-practices/
     │   ├── zod-4/
     │   └── zustand-5/
     ├── backend/                 # Backend
+    │   ├── django-drf/
     │   ├── golang-expert/
-    │   └── django-drf/
+    │   ├── hexagonal-architecture-layers-java/
+    │   ├── java-21/
+    │   └── spring-boot-3/
     ├── testing/                 # Testing
     │   ├── playwright/
     │   └── pytest/
